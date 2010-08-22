@@ -951,7 +951,7 @@ public class ViewContactActivity extends Activity
                         final Integer type = entryValues.getAsInteger(Phone.TYPE);                        
                         
                         //Wysie: Bug here, entry.type always returns -1.
-                        if (/*entry.type*/type == CommonDataKinds.Phone.TYPE_MOBILE || mShowSmsLinksForAllPhones) {
+                        if ((type != null && type == CommonDataKinds.Phone.TYPE_MOBILE) || mShowSmsLinksForAllPhones) {
                             // Add an SMS entry
                             if (kind.iconAltRes > 0) {
                                 entry.secondaryActionIcon = kind.iconAltRes;
